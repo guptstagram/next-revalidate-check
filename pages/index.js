@@ -3,8 +3,8 @@ import Head from "next/head";
 export const getStaticProps = async () => {
   const randNum = Math.floor(Math.random() * 10000);
   return {
+    revalidate: 50,
     props: {
-      revalidate: 50,
       randNum,
     },
   };
